@@ -7,10 +7,8 @@ import { Component } from '@angular/core';
 })
 
 export class CityInputComponent {
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  city = '';
   getCity(newCity: string) {
-    if (newCity) {
-      this.heroes.push(newCity);
-    }
-  }
+    this.city = newCity;
+  };
 }

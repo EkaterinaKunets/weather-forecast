@@ -1,11 +1,8 @@
 <div class="city-input">
   <mat-form-field>
-    <input matInput type="text" placeholder="Enter your city"
-     #city
-     (keyup.enter)="getCity(newCity.value)"
-     (blur)="getCity(newCity.value); newCity.value='' ">
+    <input #city matInput type="text" placeholder="Enter your city">
   </mat-form-field>
+  <p>{{city.value}}</p>
   <button mat-raised-button color="primary"
-  (click)="getCity(newCity.value)">Search</button>
+  (click)="getCity(city.value)">Search</button>
 </div>
-<!-- <ul><li *ngFor="let hero of heroes">{{hero}}</li></ul> -->
