@@ -1,0 +1,28 @@
+.row {
+  display: flex;
+  width: 420px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0;
+}
+
+.inner {
+  &:first-of-type {
+    width: 74px;
+    height: 50px;
+  }
+
+  &:last-of-type {
+    width: 90%;
+  }
+
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+
+mat-divider {
+  flex: 1 1 100%;
+}

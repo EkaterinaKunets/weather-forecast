@@ -11,9 +11,14 @@ import { MatFormFieldModule,
          MatListModule,
          MatDividerModule, } from '@angular/material';
 
+import { CityInputComponent } from './city-input/city-input.component';
+import { WeatherListComponent } from './weather-list/weather-list.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CityInputComponent,
+    WeatherListComponent
   ],
   imports: [
     BrowserModule,

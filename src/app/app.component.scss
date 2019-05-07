@@ -6,45 +6,4 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  .head {
-    width: 420px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-
-  .row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    margin: 16px 0;
-  }
-
-  .inner {
-    &:first-of-type {
-      flex: 1 1 74px;
-      height: 50px;
-    }
-
-    &:last-of-type {
-      flex: 1 1 90%;
-    }
-  }
-}
-
-mat-divider {
-  width: 100%;
-}
-
-mat-form-field {
-  width: 280px;
-}
-
-img {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
 }
