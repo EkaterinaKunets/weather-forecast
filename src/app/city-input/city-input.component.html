@@ -1,8 +1,7 @@
 <div class="city-input">
   <mat-form-field>
-    <input #city matInput type="text" placeholder="Enter your city">
+    <input #city matInput type="text" placeholder="Enter your city" [(ngModel)]="cityName">
   </mat-form-field>
-  <p>{{city.value}}</p>
   <button mat-raised-button color="primary"
-  (click)="getCity(city.value)">Search</button>
+  (click)="search()">Search</button>
 </div>

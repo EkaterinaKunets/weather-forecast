@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row" *ngIf="response">
   <div class="inner">
     <img src="https://lamcdn.net/wonderzine.com/post-cover/9-Rt5gDMtBKbA99_JgClvw-default.jpg">
   </div>
   <div class="inner">
-    <h4>День 1</h4>
+    <h4>День 1 {{response.message}}</h4>
     <p>
       <b><span>40</span> - <span>50</span>, </b>
       <span>пиздец дождь</span>,
