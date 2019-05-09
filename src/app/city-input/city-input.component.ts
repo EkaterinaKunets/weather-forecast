@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { ForecastHttpService } from '../forecast-http.service';
 
 @Component({
   selector: 'app-city-input',
@@ -8,18 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class CityInputComponent {
-  response: any;
-  cityName: string = "London";
 
-  constructor(private http: HttpClient) {
+  constructor(private service: ForecastHttpService) {
 
-  }
-
-  search() {
-    this.http.get('http://api.openweathermap.org/data/2.5/forecast?APPID=0877c830cbd9e3a8487d52878d2915ed&q=' + this.cityName)
-    .subscribe((response) => {
-      this.response = response;
-      console.log(this.response);
-    })
   }
 }

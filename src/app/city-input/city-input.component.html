@@ -3,5 +3,5 @@
     <input #city matInput type="text" placeholder="Enter your city" [(ngModel)]="cityName">
   </mat-form-field>
   <button mat-raised-button color="primary"
-  (click)="search()">Search</button>
+  (click)="service.search(city.value='London')">Search</button>
 </div>

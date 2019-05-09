@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ForecastHttpService } from '../forecast-http.service';
 
 @Component({
   selector: 'app-weather-list',
@@ -7,10 +8,7 @@ import { Component } from '@angular/core';
 })
 
 export class WeatherListComponent {
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
-  getCity(newCity: string) {
-    if (newCity) {
-      this.heroes.push(newCity);
-    }
+  constructor(private service: ForecastHttpService) {
+
   }
 }
