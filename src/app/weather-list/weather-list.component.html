@@ -1,14 +1,16 @@
 <div *ngIf="service.success; else elseBlock">
   <div *ngFor="let item of getWeatherItems(service.response.list)">
-    <div class="row">
-      <h4>{{item.day }}</h4>
-      <p>
-        <b><span>{{item.tMin}}</span> - <span>{{item.tMax}}</span>, </b>
-        <span>{{item.desc}}</span>,
-        <span>{{item.wSpeed}}</span>
-      </p>
+    <div>
+      <div class="row">
+        <h4>{{item.day }}</h4>
+        <div>
+          <p><b>Temperature: {{item.tMin}} - {{item.tMax}},</b></p>
+          <p>{{item.desc}},</p>
+          <p>wind speed {{item.wSpeed}}</p>
+        </div>
       </div>
       <mat-divider></mat-divider>
     </div>
+  </div>
 </div>
 <ng-template #elseBlock>Enter your city or check spelling</ng-template>
