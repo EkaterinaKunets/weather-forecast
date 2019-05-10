@@ -8,7 +8,6 @@ import { ForecastHttpService } from '../forecast-http.service';
 })
 
 export class CityInputComponent {
-
   constructor(private service: ForecastHttpService) {
 
   }

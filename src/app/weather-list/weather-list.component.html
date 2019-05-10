@@ -1,14 +1,14 @@
-<div class="row">
-  <div class="inner">
-    <img src="https://lamcdn.net/wonderzine.com/post-cover/9-Rt5gDMtBKbA99_JgClvw-default.jpg">
-  </div>
-  <div class="inner">
-    <h4>День 1 </h4>
-    <p>
-      <b><span>{{service.response.list[3].main.temp_min}}</span> - <span>{{service.response.list[3].main.temp_max}}</span>, </b>
-      <span>{{service.response.list[3].weather[0].main}}</span>,
-      <span>{{service.response.list[3].wind.speed}}</span>
-    </p>
-  </div>
+<div *ngIf="service.success; else elseBlock">
+  <div *ngFor="let item of getWeatherItems(service.response.list)">
+    <div class="row">
+      <h4>{{item.day }}</h4>
+      <p>
+        <b><span>{{item.tMin}}</span> - <span>{{item.tMax}}</span>, </b>
+        <span>{{item.desc}}</span>,
+        <span>{{item.wSpeed}}</span>
+      </p>
+      </div>
+      <mat-divider></mat-divider>
+    </div>
 </div>
-<mat-divider></mat-divider>
+<ng-template #elseBlock>Enter your city or check spelling</ng-template>

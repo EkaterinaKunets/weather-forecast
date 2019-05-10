@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class ForecastHttpService {
+  public success: boolean;
   public response: any;
   constructor(private http: HttpClient) {
 
@@ -13,9 +14,14 @@ export class ForecastHttpService {
 
   public search(city: string) {
     this.http.get('http://api.openweathermap.org/data/2.5/forecast?APPID=0877c830cbd9e3a8487d52878d2915ed&units=metric&q=' + city)
-    .subscribe((response) => {
-      this.response = response;
-      console.log(this.response);
+      .subscribe((response) => {
+          this.response = response;
+          this.success = true;
+          console.log(this.response);
+        },
+    () => {
+          this.success = false;
+          console.log(this.success);
     });
   }
 }
